@@ -2,7 +2,7 @@
 
 /*
 
-Task #1:
+Task #1: object.assign
 - Using Object.assign(), create an object "moreLanguages" that combines the following key/value pairs with the existing object "languages":
 
   {
@@ -27,6 +27,15 @@ let languages = {
 };
 
 //Write task #1 code below
+let differentLanguages =
+
+  {
+    isolates: ["Korean", "Basque"],
+    Germanic: ["Swedish", "Danish", "English"]
+  }
+
+var moreLanguages = Object.assign(languages, differentLanguages);
+console.log(moreLanguages);
 
 
 
@@ -55,11 +64,15 @@ Dog.prototype.run = function() {
 function Husky() {
   Dog.call(this); // call super constructor.
 }
+// function Dog() {
+//   Dog.call(this);
+// }
 
 // TODO: Use Object.create() in order to extend the superclass with the subclass
-//write code here
+//write code here create second
 
 var fido = new Husky();
 
 console.log('Is fido an instance of Husky?', fido instanceof Husky);// should print true
+var fido = new Dog();
 console.log('Is fido an instance of Dog?', fido instanceof Dog);// should print true
